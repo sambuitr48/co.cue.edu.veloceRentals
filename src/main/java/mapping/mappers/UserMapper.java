@@ -10,6 +10,7 @@ public class UserMapper {
                 .name(userDTO.name())
                 .mail(userDTO.mail())
                 .password(userDTO.password())
+                .mobile(userDTO.mobile())
                 .build();
     }
     public static UserDTO mapFrom(User user){
@@ -18,6 +19,7 @@ public class UserMapper {
                 .name(user.getName())
                 .mail(user.getMail())
                 .password(user.getPassword())
+                .mobile(user.getMobile())
                 .build();
     }
 }

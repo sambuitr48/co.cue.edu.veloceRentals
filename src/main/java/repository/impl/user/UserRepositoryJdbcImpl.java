@@ -29,6 +29,7 @@ public class UserRepositoryJdbcImpl implements Repository<User> {
                      """
                          SELECT *
                          FROM users
+                         WHERE mail = ? and password = ?
                          """
              )
         ){
@@ -70,14 +71,15 @@ public class UserRepositoryJdbcImpl implements Repository<User> {
         int idGenerator = 0;
         try (PreparedStatement preparedStatement = getConnection().prepareStatement(
                 """
-                    INSERT INTO users (name, email, password)
-                    VALUES (?,?,?)
+                    INSERT INTO users (name, email, password, mobile)
+                    VALUES (?,?,?,?)
                     """, Statement.RETURN_GENERATED_KEYS
         ))
         {
             preparedStatement.setString(1, user.getName());
             preparedStatement.setString(2, user.getMail());
             preparedStatement.setString(3, user.getPassword());
+            preparedStatement.setString(3, user.getMobile());
             preparedStatement.executeUpdate();
             ResultSet resultSet = preparedStatement.getGeneratedKeys();
             if (resultSet.next()){

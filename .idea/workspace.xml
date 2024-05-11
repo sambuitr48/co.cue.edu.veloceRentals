@@ -9,23 +9,28 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8299fa20-4897-48cf-97cc-af5a52395674" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/repository/impl/transaction/TransactionRepositoryJdbcImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/repository/impl/user/UserRepositoryJdbcImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/login.jsp" afterDir="false" />
+    <list default="true" id="8299fa20-4897-48cf-97cc-af5a52395674" name="Changes" comment="2.0">
+      <change afterPath="$PROJECT_DIR$/src/main/java/repository/impl/vehicle/VehicleRepositoryJdbcImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/images/descarga.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/images/pompompurin.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/login.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/registration.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Repository/Repository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/repository/Repository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Repository/impl/ReservationRepositoryJdbcImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/repository/impl/reservation/ReservationRepositoryJdbcImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/mapping/dtos/ReservationDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/mapping/dtos/ReservationDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/mapping/dtos/ReservationDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/mapping/dtos/TransactionDTO.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/mapping/dtos/UserDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/mapping/dtos/UserDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/mapping/dtos/VehicleDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/mapping/dtos/VehicleDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/mapping/mappers/ReservationMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/mapping/mappers/ReservationMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/mapping/mappers/ReservationMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/mapping/mappers/TransactionMapper.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/mapping/mappers/UserMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/mapping/mappers/UserMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/Reservation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/Reservation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/Role.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/Reservation.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/Transaction.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/Vehicle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/Vehicle.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/model/VehicleCategory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/VehicleCategory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/repository/impl/reservation/ReservationRepositoryJdbcImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/repository/impl/transaction/TransactionRepositoryJdbcImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/repository/impl/user/UserRepositoryJdbcImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/repository/impl/user/UserRepositoryJdbcImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/login.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,24 +74,30 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;Tomcat Server.Tomcat 10.1.20.executor&quot;: &quot;Run&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/ELIANA/IdeaProjects/practicabecera&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;SDKs&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "Tomcat Server.Tomcat 10.1.20.executor": "Run",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/ELIANA/IdeaProjects/practicabecera",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "SDKs",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\ELIANA\IdeaProjects\co_cue_edu_veloceRentals\src\main\webapp\images" />
+      <recent name="C:\Users\ELIANA\IdeaProjects\co_cue_edu_veloceRentals\src\main\webapp" />
+    </key>
+  </component>
   <component name="RunManager">
     <configuration name="Tomcat 10.1.20" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 10.1.23" ALTERNATIVE_JRE_ENABLED="false">
       <deployment>
@@ -194,10 +205,26 @@
       <workItem from="1715183006777" duration="1959000" />
       <workItem from="1715228685832" duration="4191000" />
       <workItem from="1715267175946" duration="671000" />
+      <workItem from="1715448130545" duration="1336000" />
+      <workItem from="1715457692029" duration="2316000" />
+      <workItem from="1715464516843" duration="5513000" />
     </task>
+    <task id="LOCAL-00001" summary="2.0">
+      <option name="closed" value="true" />
+      <created>1715448203877</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1715448203877</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="2.0" />
+    <option name="LAST_COMMIT_MESSAGE" value="2.0" />
   </component>
 </project>
