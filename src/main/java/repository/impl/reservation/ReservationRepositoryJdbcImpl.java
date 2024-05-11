@@ -1,23 +1,24 @@
-package Repository.impl;
+package repository.impl.reservation;
 
-import Repository.Repository;
+import repository.Repository;
 import config.DataBaseConnection;
 import mapping.dtos.ReservationDTO;
-import model.Reservation;
+import model.*;
 
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.List;
-import model.User;
 
 public class ReservationRepositoryJdbcImpl implements Repository<ReservationDTO> {
     private Connection getConnection() throws SQLException{
         return DataBaseConnection.getInstance();
     }
-    private ReservationDTO createReservation(ResultSet resultSet) throws SQLException {
-        Reservation reservation = new Reservation();
-        reservation.setReservation_id(resultSet.getInt("reservation_id"));
+
+    private Reservation createReservation(ResultSet resultSet) throws SQLException {
+         Reservation reservation = new Reservation();
+
+         return reservation;
     }
     @Override
     public List<ReservationDTO> list() {
@@ -35,7 +36,7 @@ public class ReservationRepositoryJdbcImpl implements Repository<ReservationDTO>
     }
 
     @Override
-    public void delete(Long id) {
+    public void delete(int id) {
 
     }
 }

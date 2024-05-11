@@ -11,6 +11,6 @@ public record ReservationDTO(int reservation_id,
                              User user,
                              Vehicle vehicle,
                              LocalDate start_date,
-                             LocalDate finish_date,
-                             String state) {
+                             LocalDate finish_date
+                        ) {
 }

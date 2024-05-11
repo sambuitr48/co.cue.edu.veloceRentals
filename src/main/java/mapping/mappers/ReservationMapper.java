@@ -10,7 +10,6 @@ public class ReservationMapper {
                 .user(reservationDTO.user())
                 .start_date(reservationDTO.start_date())
                 .finish_date(reservationDTO.finish_date())
-                .state(reservationDTO.state())
                 .build();
     }
     public static ReservationDTO mapFrom(Reservation reservation){
@@ -19,7 +18,6 @@ public class ReservationMapper {
                 .user(reservation.getUser())
                 .start_date(reservation.getStart_date())
                 .finish_date(reservation.getFinish_date())
-                .state(reservation.getState())
                 .build();
     }
 }

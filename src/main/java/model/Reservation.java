@@ -15,5 +15,4 @@ public class Reservation {
     private Vehicle vehicle;
     private LocalDate start_date;
     private LocalDate finish_date;
-    private String state;
 }
