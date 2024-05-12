@@ -1,6 +1,7 @@
 package repository.impl.user;
 
 import config.DataBaseConnection;
+import mapping.dtos.UserDTO;
 import model.User;
 import repository.Repository;
 
@@ -67,7 +68,7 @@ public class UserRepositoryJdbcImpl implements Repository<User> {
     }
 
     @Override
-    public int save(User user) {
+    public void save(User user) {
         int idGenerator = 0;
         try (PreparedStatement preparedStatement = getConnection().prepareStatement(
                 """
@@ -79,23 +80,24 @@ public class UserRepositoryJdbcImpl implements Repository<User> {
             preparedStatement.setString(1, user.getName());
             preparedStatement.setString(2, user.getMail());
             preparedStatement.setString(3, user.getPassword());
-            preparedStatement.setString(3, user.getMobile());
+            preparedStatement.setString(4, user.getMobile());
             preparedStatement.executeUpdate();
+
             ResultSet resultSet = preparedStatement.getGeneratedKeys();
+
             if (resultSet.next()){
                 idGenerator = resultSet.getInt(1);
             }
         } catch (SQLException e) {
             e.printStackTrace();
         }
-        return idGenerator;
     }
 
     @Override
     public void delete(int id) {
         try (PreparedStatement preparedStatement = getConnection().prepareStatement(
                 """
-                    DELETE * 
+                    DELETE  
                     FROM users
                     WHERE id = ?
                     """

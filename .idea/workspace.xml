@@ -2,35 +2,25 @@
 <project version="4">
   <component name="ArtifactsWorkspaceSettings">
     <artifacts-to-build>
-      <artifact name="co_cue_edu_veloceRentals:war exploded" />
+      <artifact name="co_cue_edu_veloceRentals:war" />
     </artifacts-to-build>
   </component>
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8299fa20-4897-48cf-97cc-af5a52395674" name="Changes" comment="2.0">
-      <change afterPath="$PROJECT_DIR$/src/main/java/repository/impl/vehicle/VehicleRepositoryJdbcImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/images/descarga.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/images/pompompurin.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/login.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/registration.jsp" afterDir="false" />
+    <list default="true" id="8299fa20-4897-48cf-97cc-af5a52395674" name="Changes" comment="2.1">
+      <change afterPath="$PROJECT_DIR$/src/main/java/controllers/LoginServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/controllers/RegistrationServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/service/Service.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/service/impl/UserServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/mapping/dtos/ReservationDTO.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/mapping/dtos/TransactionDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/config/DataBaseConnection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/config/DataBaseConnection.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/mapping/dtos/UserDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/mapping/dtos/UserDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/mapping/mappers/ReservationMapper.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/mapping/mappers/TransactionMapper.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/mapping/mappers/UserMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/mapping/mappers/UserMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/Reservation.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/Transaction.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/VehicleCategory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/VehicleCategory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/repository/impl/reservation/ReservationRepositoryJdbcImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/repository/impl/transaction/TransactionRepositoryJdbcImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/repository/Repository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/repository/Repository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/repository/impl/user/UserRepositoryJdbcImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/repository/impl/user/UserRepositoryJdbcImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/login.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/beans.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/META-INF/beans.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,9 +31,9 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Record" />
-        <option value="Interface" />
         <option value="Enum" />
         <option value="Jsp File" />
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -76,9 +66,11 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Maven.co_cue_edu_veloceRentals [clean].executor": "Run",
+    "Maven.co_cue_edu_veloceRentals [compile].executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "Tomcat Server.Tomcat 10.1.20.executor": "Run",
+    "Tomcat Server.Tomcat 10.1.20.executor": "Debug",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/ELIANA/IdeaProjects/practicabecera",
     "node.js.detected.package.eslint": "true",
@@ -86,24 +78,25 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "SDKs",
+    "project.structure.last.edited": "Project",
     "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
+    "project.structure.side.proportion": "0.2",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\ELIANA\IdeaProjects\co_cue_edu_veloceRentals\src\main\webapp\images" />
       <recent name="C:\Users\ELIANA\IdeaProjects\co_cue_edu_veloceRentals\src\main\webapp" />
+      <recent name="C:\Users\ELIANA\IdeaProjects\co_cue_edu_veloceRentals\src\main\webapp\images" />
     </key>
   </component>
   <component name="RunManager">
     <configuration name="Tomcat 10.1.20" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 10.1.23" ALTERNATIVE_JRE_ENABLED="false">
+      <option name="UPDATING_POLICY" value="restart-server" />
       <deployment>
-        <artifact name="co_cue_edu_veloceRentals:war exploded">
+        <artifact name="co_cue_edu_veloceRentals:war">
           <settings>
-            <option name="CONTEXT_PATH" value="/co_cue_edu_veloceRentals_war_exploded" />
+            <option name="CONTEXT_PATH" value="/co_cue_edu_veloceRentals_war" />
           </settings>
         </artifact>
       </deployment>
@@ -181,7 +174,7 @@
       <method v="2">
         <option name="Make" enabled="true" />
         <option name="BuildArtifacts" enabled="true">
-          <artifact name="co_cue_edu_veloceRentals:war exploded" />
+          <artifact name="co_cue_edu_veloceRentals:war" />
         </option>
       </method>
     </configuration>
@@ -207,7 +200,7 @@
       <workItem from="1715267175946" duration="671000" />
       <workItem from="1715448130545" duration="1336000" />
       <workItem from="1715457692029" duration="2316000" />
-      <workItem from="1715464516843" duration="5513000" />
+      <workItem from="1715464516843" duration="22560000" />
     </task>
     <task id="LOCAL-00001" summary="2.0">
       <option name="closed" value="true" />
@@ -217,7 +210,15 @@
       <option name="project" value="LOCAL" />
       <updated>1715448203877</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="2.1">
+      <option name="closed" value="true" />
+      <created>1715470042973</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1715470042973</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -225,6 +226,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="2.0" />
-    <option name="LAST_COMMIT_MESSAGE" value="2.0" />
+    <MESSAGE value="2.1" />
+    <option name="LAST_COMMIT_MESSAGE" value="2.1" />
   </component>
 </project>

@@ -9,9 +9,18 @@ public class DataBaseConnection {
     private static String user = "root";
     private static String password ="";
     private static Connection connection;
+
+    public DataBaseConnection() {
+    }
+
     public static Connection getInstance() throws SQLException{
-        if(connection == null){
-            connection = DriverManager.getConnection(url,user, password);
+        if(connection == null || connection.isClosed()){
+            try {
+                Class.forName("com.mysql.cj.jdbc.Driver");
+                connection = DriverManager.getConnection(url, user, password);
+            } catch (ClassNotFoundException e) {
+                e.printStackTrace();
+            }
         }
         return connection;
     }

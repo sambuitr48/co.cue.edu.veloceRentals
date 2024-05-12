@@ -6,7 +6,6 @@ import model.User;
 public class UserMapper {
     public static User mapFrom(UserDTO userDTO){
         return User.builder()
-                .id(userDTO.id())
                 .name(userDTO.name())
                 .mail(userDTO.mail())
                 .password(userDTO.password())
@@ -15,7 +14,6 @@ public class UserMapper {
     }
     public static UserDTO mapFrom(User user){
         return UserDTO.builder()
-                .id(user.getId())
                 .name(user.getName())
                 .mail(user.getMail())
                 .password(user.getPassword())
