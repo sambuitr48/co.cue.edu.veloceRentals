@@ -1,6 +1,7 @@
 package repository.impl.user;
 
 import config.DataBaseConnection;
+import jakarta.validation.constraints.Email;
 import mapping.dtos.UserDTO;
 import model.User;
 import repository.Repository;
@@ -30,7 +31,6 @@ public class UserRepositoryJdbcImpl implements Repository<User> {
                      """
                          SELECT *
                          FROM users
-                         WHERE mail = ? and password = ?
                          """
              )
         ){
@@ -45,17 +45,19 @@ public class UserRepositoryJdbcImpl implements Repository<User> {
     }
 
     @Override
-    public User byId(Integer id) {
+    public User verifyExist(String mail, String password) {
+
         User user = null;
         try (PreparedStatement preparedStatement = getConnection().prepareStatement(
                 """
-                    SELECT * 
+                    SELECT *
                     FROM users
-                    WHERE id = ? 
+                    WHERE mail = ? and password = ?
                     """
         ))
         {
-            preparedStatement.setInt(1, id);
+            preparedStatement.setString(1, mail);
+            preparedStatement.setString(2, password);
             ResultSet resultSet = preparedStatement.executeQuery();
             if (resultSet.next()){
                 user = createUser(resultSet);

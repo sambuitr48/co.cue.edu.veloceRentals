@@ -22,8 +22,8 @@
         }
 
         @Override
-        public User byId(Integer id) {
-            return repo.byId(id);
+        public User verifyExist(String mail, String password) {
+            return repo.verifyExist(mail, password);
         }
 
         @Override

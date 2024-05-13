@@ -1,3 +1,6 @@
+<%@page contentType="text/html" pageEncoding="UTF-8" %>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -31,7 +34,7 @@
 
 					<div class="signin-form">
 						<h2 class="form-title">Sign in</h2>
-						<form method="post" action="login" class="register-form"
+						<form method="post" action="${pageContext.request.contextPath}/Login?accion=verificar" class="register-form"
 							id="login-form">
 							<div class="form-group">
 								<label for="username"><i
@@ -52,7 +55,7 @@
 							</div>
 							<div class="form-group form-button">
 								<input type="submit" name="signin" id="signin"
-									class="form-submit" value="Log in" />
+									class="form-submit" value="singin" />
 							</div>
 						</form>
 						<div class="social-login">
