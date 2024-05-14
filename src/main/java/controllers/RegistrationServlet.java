@@ -45,11 +45,11 @@ public class RegistrationServlet extends HttpServlet {
                     .password(password)
                     .mobile(mobile)
                     .build();
-            int id = service.save(userDTO);
+            service.save(userDTO);
+            //int id = service.save(userDTO);
         } catch (Exception e) {
             e.printStackTrace();
         }
-
     }
 
     @Override
