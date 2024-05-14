@@ -1,12 +1,10 @@
 package controllers;
 
 import config.DataBaseConnection;
+import jakarta.inject.Inject;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
-import jakarta.servlet.http.HttpServlet;
-import jakarta.servlet.http.HttpServletRequest;
-import jakarta.servlet.http.HttpServletResponse;
-import jakarta.servlet.http.HttpSession;
+import jakarta.servlet.http.*;
 import model.User;
 import repository.impl.user.UserRepositoryJdbcImpl;
 import service.Service;
@@ -17,13 +15,8 @@ import java.io.IOException;
 @WebServlet(value="/Login")
 public class LoginServlet extends HttpServlet {
 
-    private UserRepositoryJdbcImpl repos;
+    @Inject
     private Service service;
-
-    public LoginServlet() {
-        this.repos = new UserRepositoryJdbcImpl();
-        this.service = new UserServiceImpl(repos);
-    }
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
@@ -52,20 +45,23 @@ public class LoginServlet extends HttpServlet {
     }
 
     private void verificar(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        HttpSession sesion;
+        HttpSession session;
         DataBaseConnection dbs;
         User us;
         us = this.getUser(req);
         us = service.verifyExist(us.getMail(),us.getPassword());
         if (us != null){
-            sesion = req.getSession();
-            sesion.setAttribute("usuario", us);
+            session = req.getSession();
+            session.setAttribute("usuario", us);
             req.setAttribute("msje","benvenute");
             this.getServletConfig().getServletContext().getRequestDispatcher("index.jsp").forward(req, resp);
         }else{
             req.setAttribute("msje", "esta malo");
             req.getRequestDispatcher("registration.jsp").forward(req,resp);
         }
+        Cookie cookie = new Cookie("username", req.getParameter("username"));
+        cookie.setMaxAge(24 * 60 * 60); // La cookie expirará en 24 horas
+        resp.addCookie(cookie);
     }
 
     private User getUser(HttpServletRequest req) {

@@ -1,6 +1,8 @@
 package repository.impl.user;
 
 import config.DataBaseConnection;
+import jakarta.enterprise.context.ApplicationScoped;
+import jakarta.inject.Inject;
 import jakarta.validation.constraints.Email;
 import mapping.dtos.UserDTO;
 import model.User;
@@ -9,12 +11,11 @@ import repository.Repository;
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
-
+@ApplicationScoped
 public class UserRepositoryJdbcImpl implements Repository<User> {
+    @Inject
+    private Connection conn;
 
-    private Connection getConnection() throws SQLException {
-        return DataBaseConnection.getInstance();
-    }
     private User createUser(ResultSet resultSet) throws SQLException {
         User user = new User();
         user.setId(resultSet.getInt("user_id"));
@@ -26,7 +27,7 @@ public class UserRepositoryJdbcImpl implements Repository<User> {
     @Override
     public List<User> list() {
         List<User> userList = new ArrayList<>();
-        try (Statement statement = getConnection().createStatement();
+        try (Statement statement = conn.createStatement();
              ResultSet resultSet = statement.executeQuery(
                      """
                          SELECT *
@@ -48,7 +49,7 @@ public class UserRepositoryJdbcImpl implements Repository<User> {
     public User verifyExist(String mail, String password) {
 
         User user = null;
-        try (PreparedStatement preparedStatement = getConnection().prepareStatement(
+        try (PreparedStatement preparedStatement = conn.prepareStatement(
                 """
                     SELECT *
                     FROM users
@@ -72,7 +73,7 @@ public class UserRepositoryJdbcImpl implements Repository<User> {
     @Override
     public void save(User user) {
         int idGenerator = 0;
-        try (PreparedStatement preparedStatement = getConnection().prepareStatement(
+        try (PreparedStatement preparedStatement = conn.prepareStatement(
                 """
                     INSERT INTO users (name, email, password, mobile)
                     VALUES (?,?,?,?)
@@ -97,7 +98,7 @@ public class UserRepositoryJdbcImpl implements Repository<User> {
 
     @Override
     public void delete(int id) {
-        try (PreparedStatement preparedStatement = getConnection().prepareStatement(
+        try (PreparedStatement preparedStatement = conn.prepareStatement(
                 """
                     DELETE  
                     FROM users

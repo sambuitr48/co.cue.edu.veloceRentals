@@ -2,6 +2,8 @@ package config;
 
 import config.DataBaseConnection;
 import jakarta.servlet.*;
+import jakarta.servlet.http.Cookie;
+import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 
 import java.io.IOException;
@@ -22,6 +24,16 @@ public class ConexionFilter implements Filter {
     @Override
     public void doFilter(ServletRequest servletRequest, ServletResponse servletResponse, FilterChain filterChain)
             throws IOException, ServletException {
+        Cookie[] cookies = ((HttpServletRequest) servletRequest).getCookies();
+        boolean userAuthenticated = false;
+        if (cookies != null) {
+            for (Cookie cookie : cookies) {
+                if ("username".equals(cookie.getName())) {
+                    userAuthenticated = true;
+                    break;
+                }
+            }
+        }
         try {
             if (conn.getAutoCommit()) {
                 conn.setAutoCommit(false);

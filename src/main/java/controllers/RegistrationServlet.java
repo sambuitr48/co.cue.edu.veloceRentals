@@ -1,6 +1,7 @@
 package controllers;
 
 import config.DataBaseConnection;
+import jakarta.inject.Inject;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
@@ -23,13 +24,10 @@ public class RegistrationServlet extends HttpServlet {
     private Connection getConnection() throws SQLException {
         return DataBaseConnection.getInstance();
     }
-    private UserRepositoryJdbcImpl repos;
+    @Inject
     private Service service;
 
-    public RegistrationServlet() {
-        this.repos = new UserRepositoryJdbcImpl();
-        this.service = new UserServiceImpl(repos);
-    }
+
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
