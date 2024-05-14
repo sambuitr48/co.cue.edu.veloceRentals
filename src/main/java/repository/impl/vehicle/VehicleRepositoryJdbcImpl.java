@@ -18,6 +18,7 @@ public class VehicleRepositoryJdbcImpl implements VehicleRepository<Vehicle> {
         vehicle.setVehicleCategory(VehicleCategory.valueOf(resultSet.getString("vehicle_category")));
         vehicle.setBrand(resultSet.getString("brand"));
         vehicle.setPlate(resultSet.getString("plate"));
+        vehicle.setPrice(resultSet.getDouble("price"));
         vehicle.setState(resultSet.getString("state"));
         return vehicle;
     }
@@ -60,13 +61,14 @@ public class VehicleRepositoryJdbcImpl implements VehicleRepository<Vehicle> {
     public void save(Vehicle vehicle) {
         int idGenerator = 0;
         try (PreparedStatement preparedStatement = conn.prepareStatement(
-                "INSERT INTO vehicles (vehicle_category, brand, plate, state) VALUES (?,?,?,?)",
+                "INSERT INTO vehicles (vehicle_category, brand, plate, price, state) VALUES (?,?,?,?,?)",
                 Statement.RETURN_GENERATED_KEYS)
         ) {
             preparedStatement.setString(1, vehicle.getVehicleCategory().toString());
             preparedStatement.setString(2, vehicle.getBrand());
             preparedStatement.setString(3, vehicle.getPlate());
-            preparedStatement.setString(4, vehicle.getState());
+            preparedStatement.setDouble(4, vehicle.getPrice());
+            preparedStatement.setString(5, vehicle.getState());
             preparedStatement.executeUpdate();
 
             ResultSet resultSet = preparedStatement.getGeneratedKeys();
