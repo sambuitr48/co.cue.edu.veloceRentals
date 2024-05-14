@@ -6,9 +6,7 @@ import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.*;
 import model.User;
-import repository.impl.user.UserRepositoryJdbcImpl;
-import service.Service;
-import service.impl.UserServiceImpl;
+import service.UserService;
 
 import java.io.IOException;
 
@@ -16,7 +14,7 @@ import java.io.IOException;
 public class LoginServlet extends HttpServlet {
 
     @Inject
-    private Service service;
+    private UserService userService;
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
@@ -49,7 +47,7 @@ public class LoginServlet extends HttpServlet {
         DataBaseConnection dbs;
         User us;
         us = this.getUser(req);
-        us = service.verifyExist(us.getMail(),us.getPassword());
+        us = userService.verifyExist(us.getMail(),us.getPassword());
         if (us != null){
             session = req.getSession();
             session.setAttribute("usuario", us);

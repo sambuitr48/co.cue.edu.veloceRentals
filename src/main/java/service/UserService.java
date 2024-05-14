@@ -5,7 +5,7 @@ import model.User;
 
 import java.util.List;
 
-public interface Service {
+public interface UserService {
     List<User> list();
     User verifyExist(String mail, String password);
     int save (UserDTO user);

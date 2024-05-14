@@ -1,18 +1,18 @@
-    package service.impl;
+    package service.impl.user;
 
     import mapping.dtos.UserDTO;
     import mapping.mappers.UserMapper;
     import model.User;
-    import repository.impl.user.UserRepositoryJdbcImpl;
-    import service.Service;
+    import repository.impl.user.UserUserRepositoryJdbcImpl;
+    import service.UserService;
 
     import java.util.List;
 
-    public class UserServiceImpl implements Service {
+    public class UserUserServiceImpl implements UserService {
 
-        private final UserRepositoryJdbcImpl repo;
+        private final UserUserRepositoryJdbcImpl repo;
 
-        public UserServiceImpl(UserRepositoryJdbcImpl repo) {
+        public UserUserServiceImpl(UserUserRepositoryJdbcImpl repo) {
             this.repo = repo;
         }
 

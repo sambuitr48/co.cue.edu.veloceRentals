@@ -1,25 +1,21 @@
 package filter;
 
-import repository.impl.user.UserRepositoryJdbcImpl;
-import service.Service;
-import config.DataBaseConnection;
+import repository.impl.user.UserUserRepositoryJdbcImpl;
+import service.UserService;
 import jakarta.servlet.*;
-import jakarta.servlet.annotation.WebFilter;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import jakarta.servlet.http.HttpSession;
-import model.User;
-import service.Service;
-import service.impl.UserServiceImpl;
+import service.impl.user.UserUserServiceImpl;
 
 import java.io.IOException;
 
 public class LoginFilter implements Filter {
-    private Service service;
+    private UserService userService;
 
     @Override
     public void init(FilterConfig filterConfig) throws ServletException {
-        this.service = new UserServiceImpl(new UserRepositoryJdbcImpl());
+        this.userService = new UserUserServiceImpl(new UserUserRepositoryJdbcImpl());
     }
 
     @Override

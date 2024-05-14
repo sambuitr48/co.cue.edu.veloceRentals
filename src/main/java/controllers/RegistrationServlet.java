@@ -8,11 +8,7 @@ import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import mapping.dtos.UserDTO;
-import model.User;
-import repository.Repository;
-import repository.impl.user.UserRepositoryJdbcImpl;
-import service.Service;
-import service.impl.UserServiceImpl;
+import service.UserService;
 
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -25,7 +21,7 @@ public class RegistrationServlet extends HttpServlet {
         return DataBaseConnection.getInstance();
     }
     @Inject
-    private Service service;
+    private UserService userService;
 
 
 
@@ -43,7 +39,7 @@ public class RegistrationServlet extends HttpServlet {
                     .password(password)
                     .mobile(mobile)
                     .build();
-            service.save(userDTO);
+            userService.save(userDTO);
             //int id = service.save(userDTO);
         } catch (Exception e) {
             e.printStackTrace();

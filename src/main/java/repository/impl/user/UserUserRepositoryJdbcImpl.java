@@ -1,18 +1,15 @@
 package repository.impl.user;
 
-import config.DataBaseConnection;
 import jakarta.enterprise.context.ApplicationScoped;
 import jakarta.inject.Inject;
-import jakarta.validation.constraints.Email;
-import mapping.dtos.UserDTO;
 import model.User;
-import repository.Repository;
+import repository.UserRepository;
 
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 @ApplicationScoped
-public class UserRepositoryJdbcImpl implements Repository<User> {
+public class UserUserRepositoryJdbcImpl implements UserRepository<User> {
     @Inject
     private Connection conn;
 

@@ -10,8 +10,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8299fa20-4897-48cf-97cc-af5a52395674" name="Changes" comment="2.1">
-      <change beforePath="$PROJECT_DIR$/src/main/java/config/ConexionFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/config/ConexionFilter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/repository/VehicleRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/service/VehicleService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/controllers/LoginServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/LoginServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controllers/RegistrationServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/RegistrationServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/filter/LoginFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/filter/LoginFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/repository/Repository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/repository/UserRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/repository/impl/user/UserRepositoryJdbcImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/repository/impl/user/UserUserRepositoryJdbcImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/repository/impl/vehicle/VehicleRepositoryJdbcImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/repository/impl/vehicle/VehicleRepositoryJdbcImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/service/Service.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/service/impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/impl/UserUserServiceImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,10 +31,10 @@
       <list>
         <option value="Record" />
         <option value="Enum" />
-        <option value="Interface" />
-        <option value="Jsp File" />
         <option value="AnnotationType" />
         <option value="Class" />
+        <option value="Jsp File" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -62,6 +70,7 @@
     "Maven.co_cue_edu_veloceRentals [compile].executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "Tomcat Server.Tomcat 10.1.20.executor": "Debug",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/ELIANA/Desktop/webapp-sessionn - vehiculos",
