@@ -28,11 +28,11 @@ public class LoginServlet extends HttpServlet {
                     case "cerrar":
                         cerrar(req, resp);
                     default:
-                        resp.sendRedirect("login.jsp");
+                        resp.sendRedirect("/login.jsp");
                 }
 
             } else {
-                resp.sendRedirect("login.jsp");
+                resp.sendRedirect("/login.jsp");
             }
         } catch (Exception e) {
             System.out.println("error" + e.getMessage());

@@ -1,0 +1,9 @@
+openapi: 3.0.3
+info:
+  title: JDBC API
+  description: Permite a los desarrolladores Java interactuar con bases de datos relacionales. La usamos para establecer conexiones con la base de datos MySQL y ejecutar consultas SQL para recuperar, insertar, actualizar y eliminar datos.
+  version:
+servers:
+  - url:
+paths:
+  

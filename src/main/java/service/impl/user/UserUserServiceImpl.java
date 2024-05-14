@@ -1,5 +1,7 @@
     package service.impl.user;
 
+    import jakarta.enterprise.context.ApplicationScoped;
+    import jakarta.inject.Inject;
     import mapping.dtos.UserDTO;
     import mapping.mappers.UserMapper;
     import model.User;
@@ -7,15 +9,11 @@
     import service.UserService;
 
     import java.util.List;
-
+@ApplicationScoped
     public class UserUserServiceImpl implements UserService {
 
-        private final UserUserRepositoryJdbcImpl repo;
-
-        public UserUserServiceImpl(UserUserRepositoryJdbcImpl repo) {
-            this.repo = repo;
-        }
-
+    @Inject
+    private UserUserRepositoryJdbcImpl repo;
         @Override
         public List<User> list() {
             return repo.list();

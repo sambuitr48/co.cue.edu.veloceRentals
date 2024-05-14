@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="dataSourceStorageLocal" created-in="IU-233.13135.103">
+    <data-source name="velocerentals (4).sql" uuid="8c199304-49be-4f8f-9bb9-f8fe07d0a9e4">
+      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" dbms="SQLITE" />
+      <secret-storage>master_key</secret-storage>
+      <auth-provider>no-auth</auth-provider>
+      <schema-mapping />
+    </data-source>
+  </component>
+</project>

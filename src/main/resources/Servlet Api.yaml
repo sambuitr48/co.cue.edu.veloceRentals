@@ -1,0 +1,9 @@
+openapi: 3.0.3
+info:
+  title:  Servlet API
+  description: Esta API proporciona clases e interfaces para crear servlets web en Java. Utilizamos estas clases para manejar las solicitudes HTTP y generar respuestas dinámicas.
+  version:
+servers:
+  - url:
+paths:
+  

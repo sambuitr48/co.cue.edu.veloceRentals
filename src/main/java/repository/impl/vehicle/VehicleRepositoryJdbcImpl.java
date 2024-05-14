@@ -1,5 +1,7 @@
 package repository.impl.vehicle;
 
+import annotations.Mysqlconn;
+import jakarta.enterprise.context.ApplicationScoped;
 import jakarta.inject.Inject;
 import model.Vehicle;
 import model.VehicleCategory;
@@ -8,9 +10,10 @@ import repository.VehicleRepository;
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
-
+@ApplicationScoped
 public class VehicleRepositoryJdbcImpl implements VehicleRepository<Vehicle> {
     @Inject
+    @Mysqlconn
     private Connection conn;
     private Vehicle createVehicle(ResultSet resultSet) throws SQLException {
         Vehicle vehicle = new Vehicle();

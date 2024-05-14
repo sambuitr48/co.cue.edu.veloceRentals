@@ -1,5 +1,6 @@
 package repository.impl.user;
 
+import annotations.Mysqlconn;
 import jakarta.enterprise.context.ApplicationScoped;
 import jakarta.inject.Inject;
 import model.User;
@@ -11,6 +12,7 @@ import java.util.List;
 @ApplicationScoped
 public class UserUserRepositoryJdbcImpl implements UserRepository<User> {
     @Inject
+    @Mysqlconn
     private Connection conn;
 
     private User createUser(ResultSet resultSet) throws SQLException {

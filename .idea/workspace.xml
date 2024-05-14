@@ -10,16 +10,25 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8299fa20-4897-48cf-97cc-af5a52395674" name="Changes" comment="2.1">
-      <change afterPath="$PROJECT_DIR$/src/main/java/controllers/RegisterVehicleServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/controllers/VehicleServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/registerVehicles.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/JDBC API.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Servlet Api.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controllers/LoginServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/LoginServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/filter/LoginFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/filter/LoginFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/repository/impl/user/UserUserRepositoryJdbcImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/repository/impl/user/UserUserRepositoryJdbcImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/repository/impl/vehicle/VehicleRepositoryJdbcImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/repository/impl/vehicle/VehicleRepositoryJdbcImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/vehicle.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/vehicle.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/service/impl/user/UserUserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/impl/user/UserUserServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/service/impl/vehicle/VehicleServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/impl/vehicle/VehicleServiceImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DatabaseLocalColorSettings">
+    <colors>
+      <entry key="8c199304-49be-4f8f-9bb9-f8fe07d0a9e4" value="Violet" />
+    </colors>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -30,6 +39,7 @@
         <option value="Interface" />
         <option value="Jsp File" />
         <option value="Class" />
+        <option value="OpenAPI" />
       </list>
     </option>
   </component>
@@ -63,19 +73,20 @@
   "keyToString": {
     "Maven.co_cue_edu_veloceRentals [clean].executor": "Run",
     "Maven.co_cue_edu_veloceRentals [compile].executor": "Run",
+    "OpenAPI/Swagger Code Generator.JDBC API.yaml.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "Tomcat Server.Tomcat 10.1.20.executor": "Debug",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/ELIANA/Desktop/webapp-sessionn - vehiculos",
+    "last_opened_file_path": "C:/Users/ELIANA/IdeaProjects/co_cue_edu_veloceRentals",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.0",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
     "vue.rearranger.settings.migration": "true"
   }
@@ -86,7 +97,30 @@
       <recent name="C:\Users\ELIANA\IdeaProjects\co_cue_edu_veloceRentals\src\main\webapp\images" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Tomcat Server.Tomcat 10.1.20">
+    <configuration name="JDBC API.yaml" type="SwaggerCodegen" temporary="true" show_console_on_std_err="false" show_console_on_std_out="false">
+      <option name="allowRunningInParallel" value="false" />
+      <option name="customTemplatesPath" value="" />
+      <option name="envs">
+        <map />
+      </option>
+      <option name="generateToPath" value="C:\Users\ELIANA\IdeaProjects\co_cue_edu_veloceRentals\src\main\gen" />
+      <option name="generationParameters">
+        <list />
+      </option>
+      <option name="generatorType" value="OPENAPI_GENERATOR_V6" />
+      <option name="jdkPath" value="C:\Program Files\JetBrains\IntelliJ IDEA 2023.3.2\jbr\bin\java.exe" />
+      <option name="language" value="java" />
+      <option name="passParentEnvs" value="true" />
+      <option name="programParameters" />
+      <option name="projectPathOnTarget" />
+      <option name="selectedOptions">
+        <list />
+      </option>
+      <option name="specificationPath" value="C:\Users\ELIANA\IdeaProjects\co_cue_edu_veloceRentals\src\main\resources\JDBC API.yaml" />
+      <option name="workingDirectory" value="C:\Users\ELIANA\IdeaProjects\co_cue_edu_veloceRentals\src\main\resources" />
+      <method v="2" />
+    </configuration>
     <configuration name="Tomcat 10.1.20" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 10.1.23" ALTERNATIVE_JRE_ENABLED="false">
       <option name="UPDATING_POLICY" value="restart-server" />
       <deployment>
@@ -174,6 +208,11 @@
         </option>
       </method>
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="OpenAPI/Swagger Code Generator.JDBC API.yaml" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -197,6 +236,7 @@
       <workItem from="1715448130545" duration="1336000" />
       <workItem from="1715457692029" duration="2316000" />
       <workItem from="1715464516843" duration="22560000" />
+      <workItem from="1715688793719" duration="8743000" />
     </task>
     <task id="LOCAL-00001" summary="2.0">
       <option name="closed" value="true" />
